@@ -29,7 +29,7 @@ class RightViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.infoTableView.dataSource = self
         
         //Xibのクラスを読み込む宣言を行う
-        var nib:UINib = UINib(nibName: "RightViewTableCell", bundle: nil)
+        let nib:UINib = UINib(nibName: "RightViewTableCell", bundle: nil)
         self.infoTableView.registerNib(nib, forCellReuseIdentifier: "RightCell")
     }
 
@@ -51,7 +51,7 @@ class RightViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         //Xibファイルを元にデータを作成する
-        var cell = tableView.dequeueReusableCellWithIdentifier("RightCell") as? RightViewTableCell;
+        let cell = tableView.dequeueReusableCellWithIdentifier("RightCell") as? RightViewTableCell;
             
         //テキスト・画像等の表示
         cell!.rightTableTitle.text = "お知らせ"
@@ -69,7 +69,7 @@ class RightViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //セルをタップした時に呼び出される
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Right TableView Tapped！")
+        print("Right TableView Tapped！")
     }
     
     //セルの高さを返す ※必須

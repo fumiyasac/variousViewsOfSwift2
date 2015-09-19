@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     //左スワイプ時のアニメーションを追加する
     func leftSliderAnimation() {
         
-        println("Left Swipe Recognized!")
+        print("Left Swipe Recognized!")
         
         //メンバ変数の値を変更する
         if(self.state == ContainerState.Newtral){
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     //右スワイプ時のアニメーションを追加する
     func rightSliderAnimation() {
         
-        println("Right Swipe Recognized!")
+        print("Right Swipe Recognized!")
         
         //メンバ変数の値を変更する
         if(self.state == ContainerState.Newtral){
@@ -91,7 +91,7 @@ class ViewController: UIViewController {
     func animateWithContents() {
         
         //アニメーションをする
-        UIView.animateWithDuration(0.2, delay: 0, options: nil, animations: {
+        UIView.animateWithDuration(0.2, delay: 0, options: [], animations: {
             
             self.switchAlphaButton(self.state)
             

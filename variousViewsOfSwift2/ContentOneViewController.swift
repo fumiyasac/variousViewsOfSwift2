@@ -35,10 +35,10 @@ class ContentOneViewController: UIViewController, UITableViewDelegate, UITableVi
         self.contentOneTableView.dataSource = self
         
         //Xibのクラスを読み込む宣言を行う
-        var nibDefault:UINib = UINib(nibName: "OneDefaultTableViewCell", bundle: nil)
+        let nibDefault:UINib = UINib(nibName: "OneDefaultTableViewCell", bundle: nil)
         self.contentOneTableView.registerNib(nibDefault, forCellReuseIdentifier: "oneDefaultCell")
         
-        var nibSelected:UINib = UINib(nibName: "OneSelectedTableViewCell", bundle: nil)
+        let nibSelected:UINib = UINib(nibName: "OneSelectedTableViewCell", bundle: nil)
         self.contentOneTableView.registerNib(nibSelected, forCellReuseIdentifier: "oneSelectedCell")
         
     }
@@ -64,7 +64,7 @@ class ContentOneViewController: UIViewController, UITableViewDelegate, UITableVi
         if(self.targetCellSelected(indexPath)){
             
             //Xibファイルを元にデータを作成する
-            var cell = tableView.dequeueReusableCellWithIdentifier("oneSelectedCell") as? OneSelectedTableViewCell;
+            let cell = tableView.dequeueReusableCellWithIdentifier("oneSelectedCell") as? OneSelectedTableViewCell;
             
             //テキスト・画像等の表示
             cell!.oneTitle.text = "2015年梅雨入り宣言"
@@ -81,7 +81,7 @@ class ContentOneViewController: UIViewController, UITableViewDelegate, UITableVi
         }else{
             
             //Xibファイルを元にデータを作成する
-            var cell = tableView.dequeueReusableCellWithIdentifier("oneDefaultCell") as? OneDefaultTableViewCell;
+            let cell = tableView.dequeueReusableCellWithIdentifier("oneDefaultCell") as? OneDefaultTableViewCell;
             
             //テキスト・画像等の表示
             cell!.oneTitle.text = "2015年梅雨入り宣言"
@@ -100,7 +100,7 @@ class ContentOneViewController: UIViewController, UITableViewDelegate, UITableVi
     //セルをタップした時に呼び出される
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        println("Contents One TableView Tapped！")
+        print("Contents One TableView Tapped！")
         if (self.targetCellSelected(indexPath)) {
             self.selectedIndexPath = nil;
         } else {

@@ -262,6 +262,8 @@
 		DEA64FF01B1CB3E6007FE49D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = just1factory;
 				TargetAttributes = {

@@ -30,8 +30,8 @@ class LeftViewController: UIViewController {
         for i in 0...4{
             
             //ボタンをContainerViewのViewControllerへ配置する
-            var button: UIButton = UIButton()
-            var buttonPosY = 50 + (self.buttonSpace + self.buttonSize) * i
+            let button: UIButton = UIButton()
+            let buttonPosY = 50 + (self.buttonSpace + self.buttonSize) * i
             button.frame = CGRectMake(CGFloat(10.0), CGFloat(buttonPosY), CGFloat(self.buttonSize), CGFloat(self.buttonSize))
             
             //ボタンのセッティング
@@ -51,7 +51,7 @@ class LeftViewController: UIViewController {
 
     //ボタンをタップした時のアクション
     func buttonTapped(button: UIButton){
-        println("Left Button Tapped！")
+        print("Left Button Tapped！")
     }
     
     override func didReceiveMemoryWarning() {

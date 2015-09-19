@@ -47,18 +47,18 @@ class ContentTwoViewController: UIViewController, UIScrollViewDelegate {
         for i in 0...pageNumber{
             
             //配置する要素のY座標を設定
-            var imageViewPosY = (Int)(self.deviceImageHeight) * i
-            var mainLabelPosY = (Int)(self.deviceImageHeight) * (i + 1) - 70
-            var subLabelPosY  = (Int)(self.deviceImageHeight) * (i + 1) - 48
+            let imageViewPosY = (Int)(self.deviceImageHeight) * i
+            let mainLabelPosY = (Int)(self.deviceImageHeight) * (i + 1) - 70
+            let subLabelPosY  = (Int)(self.deviceImageHeight) * (i + 1) - 48
             
             //画像の配置（画像は今回ない）
-            var targetImageView = UIImageView()
+            let targetImageView = UIImageView()
             targetImageView.frame = CGRectMake(0.0, CGFloat(imageViewPosY), self.deviceImageWidth, self.deviceImageHeight)
             targetImageView.backgroundColor = UIColor.lightGrayColor()
             self.twoScrollView.addSubview(targetImageView)
             
             //メインラベルの配置
-            var targetMainLabel = UILabel()
+            let targetMainLabel = UILabel()
             targetMainLabel.frame = CGRectMake(5.0, CGFloat(mainLabelPosY), CGFloat(self.deviceImageWidth - 10), 20.0)
             targetMainLabel.textAlignment = NSTextAlignment.Left
             targetMainLabel.font = UIFont(name: "System", size: CGFloat(14.0))
@@ -67,7 +67,7 @@ class ContentTwoViewController: UIViewController, UIScrollViewDelegate {
             self.twoScrollView.addSubview(targetMainLabel)
             
             //サブラベルの配置
-            var targetSubLabel = UILabel()
+            let targetSubLabel = UILabel()
             targetSubLabel.frame = CGRectMake(5.0, CGFloat(subLabelPosY), CGFloat(self.deviceImageWidth - 10), 20.0)
             targetSubLabel.textAlignment = NSTextAlignment.Left
             targetSubLabel.font = UIFont(name: "System", size: CGFloat(14.0))
@@ -95,9 +95,9 @@ class ContentTwoViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(scrollview: UIScrollView) {
         
         //画像の位置から画像の番号を判別する
-        var pageHeight : CGFloat = (CGFloat)(self.twoScrollView.frame.size.height)
-        var fractionalPage : Double = Double(self.twoScrollView.contentOffset.y / pageHeight)
-        var page : NSInteger = lround(fractionalPage)
+        let pageHeight : CGFloat = (CGFloat)(self.twoScrollView.frame.size.height)
+        let fractionalPage : Double = Double(self.twoScrollView.contentOffset.y / pageHeight)
+        let page : NSInteger = lround(fractionalPage)
         self.twoPageControl.currentPage = page;
     }
 

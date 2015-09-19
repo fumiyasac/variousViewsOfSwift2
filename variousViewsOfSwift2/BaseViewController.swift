@@ -46,7 +46,7 @@ class BaseViewController: UIViewController {
     func switchingWholeContainer(displayState: BaseState) {
         
         //アニメーション位置を決める
-        UIView.animateWithDuration(0.2, delay: 0, options: nil, animations: {
+        UIView.animateWithDuration(0.2, delay: 0, options: [], animations: {
             
             //表示コンテナの制御を行う
             self.switchingDisplayContainer(displayState)
